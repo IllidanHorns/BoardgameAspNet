@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Product>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board Game Shop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/layout.css" asp-append-version="true">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="catalog_mass">
+        @{
+            foreach (var i in Model)
+            {
+                <div class="product-card">
+                    <div class="product-images">
+                        <button class="prev-btn">❮</button>
+                        @{
+                            @foreach (var productPhoto in i.CartPhotos)
+                            {
+                                <img src="~/img/Games/@productPhoto.Photo.LinkValue" alt="Product photo" />
+                            }
+                        }
+                        <button class="next-btn">❯</button>
+                    </div>
+                    <div class="product-details">
+                        <div class="product-header">
+                            @if (i.Discount != null)
+                            {
+                                <span class="product-discount">-20%</span>
+                            }
+                            <h2 class="product-title">@i.ProductName</h2>
+                        </div>
+                        <h2 class="product-title">@i.Price ₽</h2>
+                        <div class="product-actions">
+                            <button class="favorite-btn">❤️</button>
+                            <button class="cart-btn">🛒</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</body>

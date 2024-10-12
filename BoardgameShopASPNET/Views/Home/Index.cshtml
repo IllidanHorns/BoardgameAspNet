@@ -1,0 +1,246 @@
+﻿@model IEnumerable<User>
+@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+    int numberOfIgrotekaImgs = (int)ViewBag.CountOfImgsIgroteka;
+    int numberOfHiBlockImgs = (int)ViewBag.CountOfHiBlockIgroteka;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board Game Shop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/layout.css" asp-append-version="true">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main role="main" class="container-fluid">
+        <div class="hi_block">
+            <div class="hi_block_p1">
+                <h1 class="hi_block_p1_text1">
+                    Добро пожаловать
+                    в крупнейший клуб настольных игр в Москве
+                </h1>
+                <h2 class="hi_block_p1_text2">
+                    Открой для себя более 1000 уникальных настольных игр для игроков любого уровня
+                </h2>
+                <button class="hi_block_p1_btn">
+                    Связаться с нами
+                </button>
+            </div>
+            <div class="scroll-container2">
+                @{
+                    int counter = 1;
+                    while (true)
+                    {
+                        string imageName = $"photo{counter}.jpg";
+                        <img class="scroll-item_img1" src="~/img/HiBllockImages/@imageName" alt="Game @counter">
+                        counter++;
+                        if (counter > 5)
+                        {
+                            break;    
+                        }
+                    }
+                }
+            </div>
+        </div>
+
+        <h1 class="textSizeBigRed">Игротеки</h1>
+        <div class="igroteka">
+            <div class="qwee">
+                <h1 class="opis_tarif">
+                    В нашем клубе игротека — это время,в которое каждый может найти что-то по душе. Под чутким руководством опытных мастеров, вы сможете открыть для себя множество увлекательных игр, которые подойдут как новичкам, так и заядлым игрокам.
+                </h1>
+
+                <h1 class="opis_tarif">
+                    Мастера не только помогут подобрать идеальную игру, но и подробно объяснят ее правила, чтобы вы могли сразу погрузиться в процесс.
+                </h1>
+            </div>
+            <div class="qwee">
+                <h1 class="opis_tarif">
+                    Кроме того, в стоимость посещения входят все услуги антикафе: вы сможете наслаждаться ароматным чаем, свежим кофе и вкусными печеньями, создавая уютную атмосферу для общения и веселья.
+                </h1>
+
+                <h1 class="opis_tarif">
+                    Приходите к нам с друзьями или приходите поодиночке — мы гарантируем, что время, проведенное в нашей игротеке, станет незабываемым! А если вы хотите заранее найти компанию для партии в конкретную игру, то воспользуйтесь специальным сервисом.
+                </h1>
+            </div>
+        </div>
+
+        <div class="qew">
+            <button class="igroteka_btn">
+                Найти компанию на игротеку
+            </button>
+        </div>
+
+        <div class="cont1">
+            <h2 class="textSizeBig">Почувствуй атмосферу клуба</h2>
+            <div class="scroll-container" id="scroll-container">
+                @{
+                    for (var i = 1; i <= numberOfIgrotekaImgs; i++)
+                    {
+                        string imageName = $"Igroteka{i}.jpg";
+                        <img class="scroll-item_img" src="~/img/PhotoFromTheClub/@imageName" alt="Game @i">
+                    }
+                }
+            </div>
+        </div>
+
+        <h1 class="textSizeBigRed">Тарифы</h1>
+        <div class="tarifs">
+            <div class="card_tarif">
+                <div style="margin-left:2%">
+                    <h1 class="name_tarif">Поминутный</h1>
+                    <h1 class="opis_tarif">Стандартный тариф антикафе</h1>
+                    <ol>
+                        <li class="main_tarif">Безлимитный чай, кофе и печенье</li>
+                        <li class="main_tarif">Настольные игры из общего шкафа</li>
+                        <li class="main_tarif">Настольный футбол</li>
+                        <li class="main_tarif">Приставка X-Box</li>
+                        <li class="main_tarif">Спользование пространства клуба</li>
+                    </ol>
+                    <h1 class="opis_tarif">240₽ - ПЕРВЫЙ ЧАС</h1>
+                    <h1 class="opis_tarif">ДАЛЕЕ 4₽ - МИНУТА</h1>
+                    <h1 class="opis_tarif">СТОП-ЧУК 700₽ В БУДНИ</h1>
+                    <h1 class="opis_tarif">900₽ В ВЫХОДНЫЕ ДНИ</h1>
+                </div>
+            </div>
+
+            <div class="card_tarif">
+                <div style="margin-left:2%">
+                    <h1 class="name_tarif">Дневная игротека</h1>
+                    <h1 class="opis_tarif">Дневная потому что целый день!</h1>
+                    <ol>
+                        <li class="main_tarif">Все преимущества из тарифа “поминутный”</li>
+                        <li class="main_tarif">Полная коллекция настольных игр, включая игры из закрытых шкафов</li>
+                        <li class="main_tarif">Помощь мастеров (подберём игру и расскажем правила)</li>
+                        <li class="main_tarif">Каждая 10-я игротека - бесплатно</li>
+                    </ol>
+                    <h1 class="opis_tarif">900 ₽</h1>
+                    <h1 class="opis_tarif">ВХОДНОЙ БИЛЕТ</h1>
+                    <h1 class="opis_tarif">С 12:00 до 00:00</h1>
+                    <h1 class="opis_tarif">СУББОТА И ВОСКРЕСЕНЬЕ</h1>
+                    </div>
+                </div>
+
+            <div class="card_tarif">
+                    <div style="margin-left:2%">
+                        <h1 class="name_tarif">Вечерняя игротека</h1>
+                        <h1 class="opis_tarif">Выпить кофе и поиграть вечерком</h1>
+                        <ol>
+                            <li class="main_tarif">Все преимущества из тарифа “поминутный”</li>
+                            <li class="main_tarif">Полная коллекция настольных игр, включая игры из закрытых шкафов</li>
+                            <li class="main_tarif">Помощь мастеров (подберём игру и расскажем правила)</li>
+                            <li class="main_tarif">Каждая 10-я игротека - бесплатно</li>
+                        </ol>
+                        <h1 class="opis_tarif">700₽</h1>
+                        <h1 class="opis_tarif">ВХОДНОЙ БИЛЕТ</h1>
+                        <h1 class="opis_tarif">С 18:00 до 00:00</h1>
+                        <h1 class="opis_tarif">ПОНЕДЕЛЬНИК-ЧУТВЕРГ</h1>
+                    </div>
+            </div>
+
+            <div class="card_tarif">
+                    <div style="margin-left:2%">
+                        <h1 class="name_tarif">Ночная игротека</h1>
+                        <h1 class="opis_tarif">Видели ночь, играли всю ночь до утра</h1>
+                        <ol>
+                            <li class="main_tarif">Все преимущества из тарифа “поминутный”</li>
+                            <li class="main_tarif">Полная коллекция настольных игр, включая игры из закрытых шкафов</li>
+                            <li class="main_tarif">Помощь мастеров (подберём игру и расскажем правила)</li>
+                            <li class="main_tarif">Каждая 10-я игротека - бесплатно</li>
+                        </ol>
+                        <h1 class="opis_tarif">800/900₽ </h1>
+                        <h1 class="opis_tarif">ВХОДНОЙ БИЛЕТ</h1>
+                        <h1 class="opis_tarif">С 18:00 ДО 06:00</h1>
+                        <h1 class="opis_tarif">ПЯТНИЦА-СУББОТА</h1>
+                    </div>
+            </div>
+
+            <div class="card_tarif">
+                    <div style="margin-left:2%">
+                        <h1 class="name_tarif">Субботний тариф</h1>
+                        <h1 class="opis_tarif">18 часов игротеки! Это ли не счастье?</h1>
+                        <ol>
+                            <li class="main_tarif">Все преимущества из тарифа “поминутный”</li>
+                            <li class="main_tarif">Полная коллекция настольных игр, включая игры из закрытых шкафов</li>
+                            <li class="main_tarif">Помощь мастеров (подберём игру и расскажем правила)</li>
+                            <li class="main_tarif">Каждая 10-я игротека - бесплатно</li>
+                        </ol>
+                        <h1 class="opis_tarif">1200₽</h1>
+                        <h1 class="opis_tarif">ВХОДНОЙ БИЛЕТ</h1>
+                        <h1 class="opis_tarif">С 12:00 ДО 06:00</h1>
+                        <h1 class="opis_tarif">ТОЛЬКО В СУББОТУ</h1>
+                    </div>
+            </div>
+
+            <div class="card_tarif">
+                    <div style="margin-left:2%">
+                        <h1 class="name_tarif">Аббонемент</h1>
+                        <h1 class="opis_tarif">
+                            Для самых преданных гостей
+                        </h1>
+                        <h1 class="main_tarif">Безлимитное нахождение в клубе и все преимущества тарифов в рамках абонемента.</h1>
+                        <h1 class="opis_tarif">8000₽ В МЕСЯЦ</h1>
+                        <h1 class="opis_tarif">ВСЁ ВКЛЮЧЕНО</h1>
+                    </div>
+            </div>
+        </div>
+            <div class="qew">
+                <button class="igroteka_btn">
+                    Оформить тариф
+                </button>
+            </div>
+
+        <div class="contacts-container">
+            <div class="social-media">
+                <h2>КОНТАКТЫ</h2>
+                <p>Подпишитесь на наши социальные сети, чтобы быть в курсе новостей терры и новинок настольных игр</p>
+                <div class="social-icons">
+                    <div class="icon">
+                        <img src="~/img/Icons/vk.png" alt="VK">
+                        <p>terragames</p>
+                    </div>
+                    <div class="icon">
+                        <img src="~/img/Icons/telegram.png" alt="Telegram">
+                        <p>terranri</p>
+                    </div>
+                    <div class="icon">
+                        <img src="~/img/Icons/instagram.png" alt="Instagram">
+                        <p>anticafe_terra</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-info">
+                <p><strong>ТЕЛЕФОН:</strong><br>+7 (909) 999-74-47</p>
+                <p><strong>АДРЕС:</strong><br>г. Москва, м. Бауманская<br>ул.Фридриха Энгельса, 20с2 (2 этаж)</p>
+            </div>
+
+            <div class="work-schedule">
+                <h3>РЕЖИМ РАБОТЫ:</h3>
+                <p>ПН-ЧТ -----------;с 10 до 00</p>
+                <p>ПТ -----------;с 10 до 06</p>
+                <p>СБ -----------;с 12 до 06</p>
+                <p>ВС -----------;с 12 до 00</p>
+            </div>
+        </div>
+      </main>>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="~/js/site.js"></script>
+</body>
+</html>

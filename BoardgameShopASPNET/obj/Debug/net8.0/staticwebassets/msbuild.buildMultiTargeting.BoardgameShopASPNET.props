@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BoardgameShopASPNET.props" />
+</Project>
