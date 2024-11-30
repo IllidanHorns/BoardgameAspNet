@@ -1,0 +1,22 @@
+﻿services:
+  boardgameshop.webui:
+#    image: boardgameshop.webui
+    build:
+      context: .
+      dockerfile: BoardgameShopASPNET/Dockerfile
+    depends_on:
+      - db
+    ports:
+      - "8000:8080" 
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "1234Qq!!1234_"
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+#      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+volumes:
+  mssql_data:   
