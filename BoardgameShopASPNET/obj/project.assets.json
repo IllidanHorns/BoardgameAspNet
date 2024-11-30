@@ -4045,9 +4045,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\illid\\source\\BoardgameShopASPNET\\BoardgameShopASPNET\\BoardgameShopASPNET.csproj",
-      "projectName": "BoardgameShopASPNET",
-      "projectPath": "D:\\Users\\illid\\source\\BoardgameShopASPNET\\BoardgameShopASPNET\\BoardgameShopASPNET.csproj",
+      "projectUniqueName": "D:\\Users\\illid\\source\\BoardgameShopASPNET\\BoardgameShopASPNET\\BoardgameShop.WEBUI.csproj",
+      "projectName": "BoardgameShop.WEBUI",
+      "projectPath": "D:\\Users\\illid\\source\\BoardgameShopASPNET\\BoardgameShopASPNET\\BoardgameShop.WEBUI.csproj",
       "packagesPath": "C:\\Users\\illid\\.nuget\\packages\\",
       "outputPath": "D:\\Users\\illid\\source\\BoardgameShopASPNET\\BoardgameShopASPNET\\obj\\",
       "projectStyle": "PackageReference",

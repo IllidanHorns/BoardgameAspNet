@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BoardgameShopASPNET")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31ee82e2decd9c537131c7e7e432ea213fbfe648")]
 [assembly: System.Reflection.AssemblyProductAttribute("BoardgameShopASPNET")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BoardgameShopASPNET")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

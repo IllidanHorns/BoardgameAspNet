@@ -1,7 +1,12 @@
+using BoardgameShop.WEBUI.Models.DbEntities;
+using BoardgameShop.WEBUI.Models.SideModels;
 using BoardgameShopASPNET.Models;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
+using System.Security.Claims;
 
 namespace BoardgameShopASPNET.Controllers
 {
@@ -14,25 +19,18 @@ namespace BoardgameShopASPNET.Controllers
         {
             _context = context;
         }
-        //Сделали ассинхронным, чтобы ассинхронно получать данные из БД
+
         public async Task<IActionResult>Index()
         {
             int countOfImgsIgroteka = 6;
             ViewBag.CountOfImgsIgroteka = countOfImgsIgroteka;
             ViewBag.CountOfHiBlockIgroteka = 5;
             return View(await _context.Users.ToListAsync());
-            //View возвращает в страницу Модель данных
         }
 
         public IActionResult Privacy()
         {
             return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

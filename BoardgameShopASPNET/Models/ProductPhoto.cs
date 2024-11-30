@@ -1,4 +1,6 @@
-﻿namespace BoardgameShopASPNET.Models
+﻿using BoardgameShop.WEBUI.Models.DbEntities.Classes;
+
+namespace BoardgameShop.WEBUI.Models
 {
     public class ProductPhoto
     {
@@ -6,7 +8,7 @@
         public List<CartPhoto> _cartPhotos { get; set; }
         public List<Photo> _photos { get; set; }
 
-        public ProductPhoto(List<Product> products, List<CartPhoto> cartPhotos, List<Photo> photos) 
+        public ProductPhoto(List<Product> products, List<CartPhoto> cartPhotos, List<Photo> photos)
         {
             _products = products;
             _cartPhotos = cartPhotos;

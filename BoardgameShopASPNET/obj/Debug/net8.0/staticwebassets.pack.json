@@ -1,8 +1,12 @@
 {
   "Files": [
     {
-      "Id": "D:\\Users\\illid\\source\\BoardgameShopASPNET\\BoardgameShopASPNET\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BoardgameShopASPNET.bundle.scp.css",
-      "PackagePath": "staticwebassets\\BoardgameShopASPNET.bundle.scp.css"
+      "Id": "D:\\Users\\illid\\source\\BoardgameShopASPNET\\BoardgameShopASPNET\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BoardgameShop.WEBUI.bundle.scp.css",
+      "PackagePath": "staticwebassets\\BoardgameShop.WEBUI.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Users\\illid\\source\\BoardgameShopASPNET\\BoardgameShopASPNET\\wwwroot\\css\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Login.css"
     },
     {
       "Id": "D:\\Users\\illid\\source\\BoardgameShopASPNET\\BoardgameShopASPNET\\wwwroot\\css\\index.css",
@@ -333,20 +337,20 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BoardgameShopASPNET.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BoardgameShop.WEBUI.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BoardgameShopASPNET.props",
-      "PackagePath": "build\\BoardgameShopASPNET.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BoardgameShop.WEBUI.props",
+      "PackagePath": "build\\BoardgameShop.WEBUI.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BoardgameShopASPNET.props",
-      "PackagePath": "buildMultiTargeting\\BoardgameShopASPNET.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BoardgameShop.WEBUI.props",
+      "PackagePath": "buildMultiTargeting\\BoardgameShop.WEBUI.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BoardgameShopASPNET.props",
-      "PackagePath": "buildTransitive\\BoardgameShopASPNET.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BoardgameShop.WEBUI.props",
+      "PackagePath": "buildTransitive\\BoardgameShop.WEBUI.props"
     }
   ],
   "ElementsToRemove": []

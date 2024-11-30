@@ -1,8 +1,7 @@
 ﻿const scrollContainer = document.getElementById('scroll-container');
-const scrollSpeed = 1; // Скорость прокрутки
+const scrollSpeed = 1; 
 
 function autoScroll() {
-    // Прокручиваем контейнер
     scrollContainer.scrollLeft += scrollSpeed;
 
     // Пересчитываем ширину, если текущая прокрутка доходит до конца

@@ -1,5 +1,7 @@
 using BoardgameShopASPNET.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 //билдер собирает все сервисы, которые нужны в проекте. ”казание всего: что мы работаем с куки, с бд и тд
@@ -9,6 +11,14 @@ string connectionString = builder.Configuration.GetConnectionString("DefaultConn
 /*DbContextOptionsBuilder optionsBuilder = new DbContextOptionsBuilder();
 optionsBuilder.UseSqlServer(connectionString);  - этот блок замен€ет л€мбда в теории     */
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString)); //
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
+{
+    options.LoginPath = new PathString("/Home/SignIn");
+});
+
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -26,9 +36,10 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
-
+app.UseAuthentication();
+app.UseSession();
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Admin}/{action=Index}/{id?}");
 
 app.Run();

@@ -1,4 +1,5 @@
-﻿@model IEnumerable<Product>
+﻿@using BoardgameShop.WEBUI.Models.DbEntities.Classes
+@model IEnumerable<Product>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,14 +27,14 @@
             {
                 <div class="product-card">
                     <div class="product-images">
-                        <button class="prev-btn">❮</button>
+                        <button class="prev-btn controlls">❮</button>
                         @{
                             @foreach (var productPhoto in i.CartPhotos)
                             {
-                                <img src="~/img/Games/@productPhoto.Photo.LinkValue" alt="Product photo" />
+                                <img src="@productPhoto.Photo.LinkValue" alt="Product photo" class="photo-stuff"/>
                             }
                         }
-                        <button class="next-btn">❯</button>
+                        <button class="next-btn controlls">❯</button>
                     </div>
                     <div class="product-details">
                         <div class="product-header">
@@ -53,4 +54,5 @@
             }
         }
     </div>
+    <script src="~/js/stuff-scroller.js"></script>
 </body>

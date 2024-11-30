@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M45GgqcJG+dN9H9ktV7QpouQcw/Eq63nBglQSOc/hb81ubq06jR/H6Sc3N09vS7eaWKqed2QI48Hcx8HxOw8cQ==",
+  "dgSpecHash": "zTJAp2JpV0zwZrwlrwCFJdgrXe/6Un4a89DKwxJOAfbCXaD8VfrUybPUgSdjre2NvtHZNmkoQxlXJY0ddjXKZg==",
   "success": true,
-  "projectFilePath": "D:\\Users\\illid\\source\\BoardgameShopASPNET\\BoardgameShopASPNET\\BoardgameShopASPNET.csproj",
+  "projectFilePath": "D:\\Users\\illid\\source\\BoardgameShopASPNET\\BoardgameShopASPNET\\BoardgameShop.WEBUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\illid\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\illid\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
